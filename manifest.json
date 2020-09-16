@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+
+  "name": "Robinhood News Refesher",
+  "description": "Refreshes the news list on the Robinhood website",
+  "version": "1.0",
+
+  "icons": { 
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+
+  "content_scripts": [
+    {
+      "run_at": "document_end",
+      "matches": ["*://robinhood.com/"],
+      "js": ["index.js"]
+    }
+  ],
+
+  "permissions": [
+    "http://www.robinhood.com/"
+   ]
+}
