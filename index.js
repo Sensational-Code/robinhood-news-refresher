@@ -18,7 +18,7 @@ const handleLoad = (newsContainer) => {
 	// Watch for the "show newer articles" button to appear and click it
 	const newsObserver = mutations => {
 		mutations.forEach(mutation => {
-			mutation.addedNodes[0].firstChild.click();
+			mutation.addedNodes.length && mutation.addedNodes[0].firstChild.click();
 		});
 	}
 
